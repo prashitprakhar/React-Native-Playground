@@ -1,16 +1,27 @@
 //Import Libraries to make a component
-import React from 'react';
+import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 
 //Make a component
-const Header = () => {
+const AlbumHeader = (props) => {
     const { textStyle, viewStyle } = styles;
 return (
     <View style={viewStyle}>
-    <Text style={textStyle}>Register</Text>
+    <Text style={textStyle}>{props.headerText}</Text>
     </View>
 );
 }
+
+// class AlbumHeader extends Component {
+//     render() {
+//         const { textStyle, viewStyle } = styles;
+//         return (
+//             <View style={viewStyle}>
+//             <Text style={textStyle}>{props.headerText}</Text>
+//             </View>
+//         )
+//     }
+// }
 
 const styles = {
     viewStyle : {
@@ -29,4 +40,4 @@ const styles = {
 }
 
 //Make the component available to other parts of the app
-export default Header;
+export default AlbumHeader;
