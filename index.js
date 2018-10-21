@@ -9,7 +9,7 @@ import AlbumBody from './src/components/album-body';
 
 const App = () => {
     return (
-        <View>
+        <View style={{ flex : 1}}>
         <AlbumHeader headerText={'Albums'}/>
         <AlbumBody />
         </View>
